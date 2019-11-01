@@ -1,0 +1,155 @@
+article
+    min-height: 130vh
+    position: relative
+    z-index: 2
+    font-size: 15px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    background-image: linear-gradient(rgba(209, 202, 202, 1) 50px, white 200px)
+    font-size: 23px
+    overflow: hidden
+    .intro
+        +childCenter(center)
+        text-align: center
+        flex-direction: column
+        h1
+            margin-top: 35px 
+        p
+            width: 60%
+            line-height: 40px
+            margin-top: 15px 
+    .knowledge
+        width: 90%
+        flex-wrap: wrap
+        flex-basis: 40vh
+        +childCenter(space-around) 
+        div
+            transition: .5s
+            height: 90px
+            width: 90px
+            position: relative
+            p
+                position: absolute
+                top: 50%
+                transform: scale(1) rotate(-360deg) translateY(-50%)
+                transition: .5s 
+            p.activeElem
+                transform-origin: left top
+                transform: scale(0) rotate(0deg) translateY(-50%)
+            i
+                position: absolute
+                top: 50%   
+                width: 70%
+                height: 70%
+                transform: rotate(0deg) scale(1) translateY(-50%)
+                transition: .5s
+                transform-origin: center top
+                background-size: cover
+                background-position: center
+                
+            i.activeElem
+                transition: .5s
+                transform: rotate(360deg) scale(0) translateY(-50%)
+    
+        div:nth-child(1).active
+            transform: translate(-300px, 0)
+        div:nth-child(2).active
+            opacity: 0
+            transform: translate(-70px, 150px)
+        div:nth-child(3).active
+            transform: translate(0px, 300px)
+        div:nth-child(4).active
+            opacity: 0
+        div:nth-child(5).active
+            transform: translate(0px, 300px)
+        div:nth-child(6).active
+            opacity: 0
+            transform: translate(70px, 150px)
+        div:nth-child(7).active
+            transform: translate(300px, 0)
+    .processing
+        +childCenter(center)
+        flex-direction: column
+        width: 90vw
+        span
+            position: absolute
+        .exploring
+            margin: 25px 0
+            width: 40%
+            +childCenter(space-around)
+            div
+                position: relative
+                height: 90px
+                width: 90px
+                transition: .5s
+                p
+                    transition: .5s
+                    position: absolute
+                    top: 50%
+                    transform: scale(1) rotate(-360deg) translateY(-50%)
+                p.activeElem
+                    transform-origin: left top
+                    transform: scale(0) rotate(0deg) translateY(-50%)
+                i
+                    position: absolute
+                    top: 50%   
+                    width: 70%
+                    height: 70%
+                    transform: rotate(0deg) scale(1) translateY(-50%)
+                    transition: .5s
+                    transform-origin: center top
+                    background-size: cover
+                    background-position: center
+                i.activeElem
+                    transition: .5s
+                    transform: rotate(360deg) scale(0) translateY(-50%)
+        div.active
+            transform: scale(0)                   
+                    
+    .services
+        margin-top: 100px
+        width: 80%
+        +childCenter(center) 
+        flex-wrap: wrap      
+        div
+            transition: .4s linear
+            border-radius: 5px
+            height: 200px
+            width: 30vw
+            background-image: linear-gradient(rgba(209, 202, 202, 0.849) 50px, white 200px)
+            box-shadow: 20px 0 100px rgba(0,0,0, .2)
+            margin: 30px
+            
+            a
+                display: block
+                width: 100%
+                height: 100%
+                background-size: cover
+                background-repeat: no-repeat
+                background-size: 15%
+                background-position: 50% 50%
+                display: flex
+                +childCenter(center)
+                font-size: 34px 
+            &:nth-child(1)
+                opacity: 0
+                transform: translate(-60%, 60%)
+            &:nth-child(2)
+                opacity: 0
+                transform: translate(60%, 60%)
+            &:nth-child(1).active
+                opacity: 1
+                transform: translate(0%, 0%)
+            &:nth-child(2).active
+                opacity: 1
+                transform: translate(0%, 0%)
+            &:nth-child(1) a
+                background-image: url('../images/github.png')
+            &:nth-child(2) a
+                background-size: 12%
+                background-image: url('../images/linkedin.png')
+               
+
+    

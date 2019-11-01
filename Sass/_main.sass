@@ -1,0 +1,66 @@
+main
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center 
+    background-image: linear-gradient(rgba(209, 202, 202, 1) 50px, white 200px)
+    ul
+        display: flex
+        width: 90vw
+        margin-top: 70px
+        justify-content: center
+        flex-wrap: wrap
+        list-style: none
+        li
+            width: 30vw
+            height: 280px
+            margin: 30px 30px
+            overflow: hidden
+            box-shadow: 7px 10px 20px 1px black
+            &:nth-child(1) a
+                background-image: url('../images/losowanie.png')
+            &:nth-child(2) a
+                background-image: url('../images/todoapp.png')
+            &:nth-child(3) a
+                background-image: url('../images/pogoda.jpg')
+            &:nth-child(4) a
+                background-image: url('../images/communicator.png')
+            a
+                display: block
+                min-width: 100%
+                min-height: 100%
+                border-radius: 3px
+                background-size: cover
+                background-position: center
+                position: relative
+                transition: .5s
+                .desc
+                    position: absolute
+                    left: 0%
+                    top: 0%
+                    width: 100%
+                    text-align: center
+                    height: 100%
+                    opacity: 0
+                    flex-direction: column
+                    +childCenter(space-between)
+                    color: white
+                    transition: .5s
+                    p
+                        +childCenter(center)
+                        width: 26vw
+                        height: 20%
+                        margin-bottom: 65px
+                        letter-spacing: 1px
+                        line-height: 30px
+                    .techContainer
+                        display: flex
+                        align-items: flex-start
+
+                &:hover
+                    min-width: 105%
+                    min-height: 105%
+                    box-shadow: 7px 20px 50px 1px black
+                &:hover .desc
+                    opacity: 1
+                    background: rgba(0,0,0, .7)    

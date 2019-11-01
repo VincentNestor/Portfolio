@@ -1,0 +1,167 @@
+:root{
+    --speed:0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header {
+    height: 100vh;
+    background-image: url('../images/clouds.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+        -webkit-animation: shake 4s linear infinite alternate;
+            animation: shake 4s linear infinite alternate;
+}
+
+header .box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    padding: 120px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 3px;
+    border-radius: 2px;
+    -webkit-animation: shakebox 5s linear infinite alternate;
+            animation: shakebox 5s linear infinite alternate;
+}
+
+header .box::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-image: url('../images/clouds.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    filter: blur(4px);
+    -webkit-filter: blur(4px); 
+            filter: blur(4px);
+
+}
+
+p {
+    position: relative;
+    margin: 20px 0;
+}
+
+@-webkit-keyframes shake {
+    0% {
+        -webkit-transform: translateX(0px) scale(1.05) rotate(0);
+                transform: translateX(0px) scale(1.05) rotate(0);
+    }
+
+    30% {
+        -webkit-transform: translateX(7px) scale(1.05) rotate(0.40deg);
+                transform: translateX(7px) scale(1.05) rotate(0.40deg);
+    }
+
+    35% {
+        -webkit-transform: translateX(7px) scale(1.05) rotate(0.40deg);
+                transform: translateX(7px) scale(1.05) rotate(0.40deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(10px) scale(1.05) rotate(0.6deg);
+                transform: translateX(10px) scale(1.05) rotate(0.6deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(12px) scale(1.05) rotate(1.0deg);
+                transform: translateX(12px) scale(1.05) rotate(1.0deg);
+
+    }
+}
+
+@keyframes shake {
+    0% {
+        -webkit-transform: translateX(0px) scale(1.05) rotate(0);
+                transform: translateX(0px) scale(1.05) rotate(0);
+    }
+
+    30% {
+        -webkit-transform: translateX(7px) scale(1.05) rotate(0.40deg);
+                transform: translateX(7px) scale(1.05) rotate(0.40deg);
+    }
+
+    35% {
+        -webkit-transform: translateX(7px) scale(1.05) rotate(0.40deg);
+                transform: translateX(7px) scale(1.05) rotate(0.40deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(10px) scale(1.05) rotate(0.6deg);
+                transform: translateX(10px) scale(1.05) rotate(0.6deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(12px) scale(1.05) rotate(1.0deg);
+                transform: translateX(12px) scale(1.05) rotate(1.0deg);
+
+    }
+}
+
+
+
+@keyframes shakebox {
+    0% {
+                transform: translate(0, 0);
+    }
+
+    25% {
+                transform: translate(7px, 5px);
+    }
+
+    50% {
+                transform: translate(8px, 8px);
+    }
+
+    75% {
+                transform: translate(5px, 7px);
+    }
+
+    100% {
+                transform: translate(0px, 0px);
+    }
+}
